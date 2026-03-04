@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import Logo from "../assets/Logo.png"
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://play-lh.googleusercontent.com/EIZVI9fuVoXkrkMRXDVQH_2ATw0Ku6SPy7OcC2EvTBtTi9DaD20mKCRJ3iLFzGdNyjM"
+              src={Logo}
               className="h-7"
               alt="CineTym Logo"
             />
