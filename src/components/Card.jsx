@@ -1,9 +1,9 @@
 const Card = () => {
   return (
-    <div className="bg-neutral-primary-soft mx-auto block max-w-sm p-6 border border-default rounded-base shadow-xs">
+    <div className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-default rounded-base shadow-xs">
             <a href="#">
               <img
-                className="rounded-base"
+                className="rounded-t-lg h-56 w-full object-cover"
                 src="https://images.unsplash.com/photo-1588862081126-293dc587ec51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8"
                 alt=""
               />
