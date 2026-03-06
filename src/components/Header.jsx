@@ -10,11 +10,7 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src={Logo}
-              className="h-7"
-              alt="CineTym Logo"
-            />
+            <img src={Logo} className="h-7" alt="CineTym Logo" />
             <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
               CineTym
             </span>
@@ -81,7 +77,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/"
-                  className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                  className="block py-2 px-3 text-heading bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                   aria-current="page"
                   end
                 >
