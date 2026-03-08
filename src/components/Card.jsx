@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BackUp from "../assets/backup.jpg"
+import BackUp from "../assets/backup.jfif"
 
 const Card = ({movie}) => {
   
@@ -11,7 +11,7 @@ const Card = ({movie}) => {
     <Link to={`movie/${id}`}>
       <div className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-default rounded-base shadow-xs">
         <img
-          className="rounded-t-lg"
+          className="rounded-t-lg h-96 mx-auto"
           src={image}
           alt=""
         />

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
 
-const useFetch = ({apipath}) => {
+const useFetch = ({apipath, queryTerm}) => {
   
-    const [data, setData] = useState([]);
-
-
+  const [data, setData] = useState([]);
+  
   const options = {
   method: 'GET',
   headers: {
@@ -15,19 +14,19 @@ const useFetch = ({apipath}) => {
   };
 
   useEffect(() => {
-
-    async function fetchData(){
-
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${apipath}`,options);
+    async function fetchData() {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/${apipath}?query=${queryTerm}`,
+        options,
+      );
 
       const data = await response.json();
 
       setData(data.results);
-
     }
 
     fetchData();
-  },[apipath]);
+  }, [apipath, queryTerm]);
   
   
   

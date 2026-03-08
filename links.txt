@@ -24,4 +24,4 @@ Details
 https://api.themoviedb.org/3/movie/{movie_id}
 
 Search
-https://api.themoviedb.org/3/search/{movie}?query=movie&include_adult=false&language=en-US&page=1
+https://api.themoviedb.org/3/search/movie?query={movie}&include_adult=false&language=en-US&page=1

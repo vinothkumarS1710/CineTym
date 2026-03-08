@@ -1,7 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png"
 
 const Header = () => {
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      const queryTerm = e.target.search.value;
+      e.target.reset();
+      
+      return navigate(`search?query=${queryTerm}`)
+  }
+
   return (
     <header>
       <nav className="bg-neutral-primary w-full z-20 top-0 start-0 border-b border-default">
@@ -36,12 +47,15 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <input
-                type="text"
-                id="input-group-1"
-                className="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
-                placeholder="Search"
-              />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  id="input-group-1"
+                  className="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body"
+                  placeholder="Search"
+                  name="search"
+                />
+              </form>
             </div>
             <button
               data-collapse-toggle="navbar-search"
