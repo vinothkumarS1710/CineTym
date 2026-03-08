@@ -1,12 +1,10 @@
-// import { useEffect, useState } from "react";
+import useTitle from "../hooks/useTitle";
 import Card from "../components/Card";
 import useFetch from "../hooks/useFetch";
-import MovieDetails from "./MovieDetails";
 
-
-
-const MovieList = (apipath) => {
+const MovieList = (apipath, title) => {
    
+  useTitle(title);
   const {data:movies} = useFetch(apipath); 
   
   
@@ -14,7 +12,7 @@ const MovieList = (apipath) => {
     <main>
       <section className="max-w-7xl max-auto py-7">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <Card key={movie.id} movie={movie}/>
           ))
           }
