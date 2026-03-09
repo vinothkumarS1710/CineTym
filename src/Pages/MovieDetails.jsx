@@ -27,8 +27,8 @@ const MovieDetails = () => {
   },[id]);
   
   return (
-    <main className="pt-24">
-      <section className="flex justify-around flex-wrap items-center">
+    <main className="pt-24 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-base shadow-xs">
+      <section className="flex justify-around flex-wrap items-center ">
         <div className="max-w-sm pr-5">
           <img src={image} alt="" className="rounded" />
         </div>
