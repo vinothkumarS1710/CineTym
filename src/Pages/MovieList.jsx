@@ -2,10 +2,10 @@ import useTitle from "../hooks/useTitle";
 import Card from "../components/Card";
 import useFetch from "../hooks/useFetch";
 
-const MovieList = (apipath, title) => {
+const MovieList = ({apipath, title}) => {
    
-  useTitle(title);
   const {data:movies} = useFetch(apipath); 
+  useTitle(title);
   
   
   return (
@@ -19,6 +19,9 @@ const MovieList = (apipath, title) => {
         </div>
       </section>
     </main>
+
+
+
   );
 }
 

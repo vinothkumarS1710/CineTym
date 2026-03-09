@@ -1,3 +1,4 @@
+import useTitle from "../hooks/useTitle";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { options } from "../utils/options";
@@ -8,7 +9,7 @@ const MovieDetails = () => {
   const [detail, setDetail] = useState({});
   const {original_title, overview, poster_path, genres, vote_average, vote_count} = detail; 
   const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : BackUp;
-  console.log(detail);
+  useTitle(original_title);
 
   useEffect(() => {
   

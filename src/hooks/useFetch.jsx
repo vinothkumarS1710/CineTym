@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { options } from "../utils/options";
 
 
-const useFetch = ({apipath, queryTerm}) => {
+const useFetch = (apipath, queryTerm) => {
   
   const [data, setData] = useState([]);
   
@@ -13,7 +13,6 @@ const useFetch = ({apipath, queryTerm}) => {
         if (queryTerm) {
           url += `?query=${queryTerm}`;
         }
-
         const response = await fetch(url, options);
         const data = await response.json();
 
@@ -22,8 +21,6 @@ const useFetch = ({apipath, queryTerm}) => {
 
       fetchData();
     }, [apipath, queryTerm]);
-  
-  console.log(data);
   
   
     return {
