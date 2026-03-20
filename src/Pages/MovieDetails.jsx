@@ -27,12 +27,14 @@ const MovieDetails = () => {
   },[id]);
   
   return (
-    <main className="pt-24 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-base shadow-xs">
+    <main className="p-12 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-base shadow-xs relative overflow-hidden">
+      <div className="absolute inset-[-40px] bg-cover bg-center blur-xl"
+      style={{ backgroundImage: `url(${image})` }}></div>
       <section className="flex justify-around flex-wrap items-center ">
-        <div className="max-w-sm pr-5">
+        <div className="max-w-sm pr-5 relative">
           <img src={image} alt="" className="rounded" />
         </div>
-        <div className="max-w-2xl text-gray-700 text-lg">
+        <div className="max-w-2xl text-gray-700 text-lg relative text-white">
           <h1 className="text-4xl font-bold my-3 text-center lg:text-left">
             {original_title}
           </h1>
@@ -57,7 +59,7 @@ const MovieDetails = () => {
               <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
             </svg>
 
-            <p className="ms-2 text-sm font-bold text-gray-900">
+            <p className="ms-2 text-sm font-bold text-white-900">
               {vote_average}
             </p>
 
@@ -65,7 +67,7 @@ const MovieDetails = () => {
 
             <a
               href="#"
-              className="text-sm font-medium text-gray-900 underline hover:no-underline"
+              className="text-sm font-medium text-white-900 underline hover:no-underline"
             >
               {vote_count} reviews
             </a>

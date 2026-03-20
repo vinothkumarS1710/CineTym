@@ -1,15 +1,16 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import Logo from "../assets/Logo.png"
+import { useState } from "react";
+import Logo from "../assets/Logo.png";
 
 const Header = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
       e.preventDefault();
       const queryTerm = e.target.search.value;
       e.target.reset();
-      
       return navigate(`search?query=${queryTerm}`)
   }
 
@@ -58,6 +59,7 @@ const Header = () => {
               </form>
             </div>
             <button
+              onClick={() => setIsOpen(!isOpen)}
               data-collapse-toggle="navbar-search"
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
@@ -83,10 +85,7 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-search"
-          >
+          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? "block" : "hidden"}`}id="navbar-search">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
               <li>
                 <NavLink
