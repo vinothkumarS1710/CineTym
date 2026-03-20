@@ -27,12 +27,12 @@ const MovieDetails = () => {
   },[id]);
   
   return (
-    <main className="p-12 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-base shadow-xs relative overflow-hidden">
+    <main className="p-12 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-lg shadow-xs relative overflow-hidden">
       <div className="absolute inset-[-40px] bg-cover bg-center blur-xl"
       style={{ backgroundImage: `url(${image})` }}></div>
       <section className="flex justify-around flex-wrap items-center ">
         <div className="max-w-sm pr-5 relative">
-          <img src={image} alt="" className="rounded" />
+          <img src={image} alt="" className="rounded-xl" />
         </div>
         <div className="max-w-2xl text-gray-700 text-lg relative text-white">
           <h1 className="text-4xl font-bold my-3 text-center lg:text-left">
@@ -42,7 +42,7 @@ const MovieDetails = () => {
           <p className="flex flex-wrap my-7 gap-4 justify-center lg:justify-start">
             {genres?.map((genre) => (
               <span
-                className="mr-2 border border-gray-700 rounded p-2"
+                className="mr-2 border border-white-700 rounded p-2"
                 key={genre.id}
               >
                 {genre.name}

@@ -7,6 +7,9 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
+  const activeClass = "block w-24 text-center text-white bg-red-400 rounded-xl md:bg-red-400 md:text-white md:py-1";
+  const inActiveClass  = "block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:py-1 md:dark:hover:bg-transparent";
+
   const handleSubmit = (e) => {
       e.preventDefault();
       const queryTerm = e.target.search.value;
@@ -27,7 +30,7 @@ const Header = () => {
               CineTym
             </span>
           </NavLink>
-          <div className="flex items-center md:order-2">
+          <div className="flex items-center gap-20 md:order-2">
             <label htmlFor="input-group-1" className="sr-only"></label>
             <div className="relative md:block">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -85,12 +88,17 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? "block" : "hidden"}`}id="navbar-search">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <div
+            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isOpen ? "block" : "hidden"}`}
+            id="navbar-search"
+          >
+            <ul className="font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
               <li>
                 <NavLink
                   to="/"
-                  className="block py-2 px-3 text-heading bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                   aria-current="page"
                   end
                 >
@@ -100,7 +108,9 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/movies/top"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Top
                 </NavLink>
@@ -108,7 +118,9 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/movies/popular"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Popular
                 </NavLink>
@@ -116,7 +128,9 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/movies/upcoming"
-                  className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
                 >
                   Upcoming
                 </NavLink>

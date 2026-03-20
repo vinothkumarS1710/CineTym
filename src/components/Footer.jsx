@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -12,16 +13,16 @@ const Footer = () => {
 
         <ul className="flex flex-wrap justify-center gap-4 mt-3 text-sm font-medium text-body md:mt-0">
         <li>
-            <a href="#" className="hover:underline">About</a>
+            <NavLink to="#" className="hover:underline">About</NavLink>
         </li>
         <li>
-            <a href="#" className="hover:underline">Youtube</a>
+            <NavLink to="https://www.youtube.com" className="hover:underline">Youtube</NavLink>
         </li>
         <li>
-            <a href="#" className="hover:underline">Instagram</a>
+            <NavLink to="https://www.instagram.com" className="hover:underline">Instagram</NavLink>
         </li>
         <li>
-            <a href="#" className="hover:underline">X</a>
+            <NavLink to="https://x.com" className="hover:underline">X</NavLink>
         </li>
         </ul>
 
