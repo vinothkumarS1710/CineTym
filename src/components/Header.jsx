@@ -35,7 +35,7 @@ const Header = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 w-10 h-10 flex items-center justify-center rounded-base hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+              className="md:hidden p-2 w-10 h-10 flex items-center justify-center rounded-base hover:bg-neutral-secondary-soft hover:text-heading focus:text-red-300"
             >
               <span className="sr-only">Toggle menu</span>
               <svg
