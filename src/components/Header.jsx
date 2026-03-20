@@ -27,8 +27,8 @@ const Header = () => {
               to="/"
               className="flex items-center space-x-2 rtl:space-x-reverse"
             >
-              <img src={Logo} className="h-8" alt="CineTym Logo" />
-              <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
+              <img src={Logo} className="h-10" alt="CineTym Logo" />
+              <span className="self-center text-2xl text-heading font-semibold whitespace-nowrap">
                 CineTym
               </span>
             </NavLink>
