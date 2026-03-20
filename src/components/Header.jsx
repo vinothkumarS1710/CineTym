@@ -30,7 +30,7 @@ const Header = () => {
               CineTym
             </span>
           </NavLink>
-          <div className="flex items-center gap-20 md:order-2">
+          <div className="flex items-center gap-40 mt-4 md:order-2">
             <label htmlFor="input-group-1" className="sr-only"></label>
             <div className="relative md:block">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
