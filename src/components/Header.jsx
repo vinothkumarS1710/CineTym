@@ -6,8 +6,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  const activeClass = "block w-24 py-2 px-3 text-center font-semibold text-white bg-red-400 rounded-lg md:bg-red-400 md:text-white";
-  const inActiveClass = "block w-24 py-2 px-3 text-center font-semibold text-heading rounded-lg bg-neutral-tertiary md:border-0 md:text-fg-brand";
+  const activeClass = "block w-24 py-1 px-3 text-center font-semibold text-white bg-red-400 rounded-lg md:bg-red-400 md:text-white";
+  const inActiveClass = "block w-24 py-1 px-3 text-center font-semibold text-heading rounded-lg bg-neutral-tertiary md:border-0 md:text-fg-brand";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,11 +35,10 @@ const Header = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 w-10 h-10 flex items-center justify-center rounded-base hover:bg-neutral-secondary-soft hover:text-heading focus:text-red-300"
-            >
-              <span className="sr-only">Toggle menu</span>
+              className="md:hidden p-2 w-10 h-10 flex items-center justify-center hover:bg-neutral-secondary-soft hover:text-heading focus:text-red-400">
+              <span className="sr-only">Open Main menu</span>
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 text-red-400 rounded-3xl"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -51,9 +50,9 @@ const Header = () => {
             </button>
           </div>
 
-          <div className={`flex flex-col md:flex-row md:items-center md:space-x-6 w-full md:w-auto ${isOpen ? "block" : "hidden md:flex"} mt-3 md:mt-0`}>
+          <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto ${isOpen ? "block" : "hidden md:flex"} mt-3 md:mt-0`}>
 
-            <ul className="flex flex-col md:flex-row md:space-x-4 items-center w-full md:w-auto border md:border-0 rounded-base bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
+            <ul className="flex flex-col md:flex-row md:space-x-4 items-center w-56 md:w-auto border border-red-400 mt-5 md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
               <li>
                 <NavLink to="/" end className={({ isActive }) => isActive ? activeClass : inActiveClass}>
                   Home
@@ -81,7 +80,7 @@ const Header = () => {
               <div className="relative w-full md:w-64">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
-                    className="w-4 h-4 text-body"
+                    className="w-4 h-4 text-red-300"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -95,7 +94,7 @@ const Header = () => {
                   type="text"
                   name="search"
                   placeholder="Search a movie"
-                  className="block w-full px-3 py-2.5 ps-9 pe-3 mt-4 rounded-md border border-red-400 text-heading text-sm focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+                  className="block w-full px-3 py-2.5 ps-9 pe-3 mt-4 rounded-2xl border border-red-400 focus:ring-2 focus:ring-red-400 focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
                 />
               </div>
             </form>
