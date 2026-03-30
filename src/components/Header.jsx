@@ -38,7 +38,7 @@ const getIndicatorPosition = () => {
   };
 
   return (
-    <header className="bg-neutral-primary w-full border-b border-black md:border-[#ff3e03]">
+    <header className="bg-neutral-primary w-full border-b border-[#ff3e03] md:border-[#ff3e03]">
       <div className="mx-auto px-4 py-5 max-w-screen-xl">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -102,7 +102,7 @@ const getIndicatorPosition = () => {
               <div className="relative w-full md:w-64">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
-                    className="w-4 h-4 text-[#ff3e03]"
+                    className="w-4 h-4 text-black"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ const getIndicatorPosition = () => {
                   type="text"
                   name="search"
                   placeholder="Search a movie"
-                  className="block w-full px-3 py-1.5 ps-9 pe-3 rounded-xl border border-[#ff3e03] focus:ring-2 focus:ring-[#ff3e03] focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
+                  className="block w-full px-3 py-1.5 ps-9 pe-3 rounded-xl border border-black focus:ring-2 focus:ring-[#ff3e03] focus:border-none focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
                 />
               </div>
             </form>
