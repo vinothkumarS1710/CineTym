@@ -6,8 +6,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  const activeClass = "block w-24 py-1 px-3 text-center font-semibold text-white bg-red-400 rounded-lg md:bg-red-400 md:text-white";
-  const inActiveClass = "block w-24 py-1 px-3 text-center font-semibold text-heading rounded-lg bg-neutral-tertiary md:border-0 md:text-fg-brand";
+  const activeClass = "block w-24 px-3 py-1.5 text-center font-semibold text-white bg-red-400 rounded-xl md:bg-red-400 md:text-white";
+  const inActiveClass = "block w-24 px-3 py-1.5 text-center font-semibold text-heading rounded-xl bg-neutral-tertiary md:border-0 md:text-fg-brand";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,9 +50,9 @@ const Header = () => {
             </button>
           </div>
 
-          <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto ${isOpen ? "block" : "hidden md:flex"} mt-3 md:mt-0`}>
+          <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto ${isOpen ? "block" : "hidden md:flex"} md:mt-0`}>
 
-            <ul className="flex flex-col md:flex-row md:space-x-4 items-center w-56 md:w-auto border border-red-400 mt-5 md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
+            <ul className="flex flex-col md:flex-row md:space-x-4 mt-8 mb-3 items-center w-56 md:w-auto md:mt-0 md:mb-0 border border-red-400 md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
               <li>
                 <NavLink to="/" end className={({ isActive }) => isActive ? activeClass : inActiveClass}>
                   Home
@@ -76,7 +76,7 @@ const Header = () => {
             </ul>
 
           </div>
-            <form onSubmit={handleSubmit} className="w-full md:w-auto mt-3 md:mt-0 md:ml-4">
+            <form onSubmit={handleSubmit} className="w-full md:w-auto mt-6 md:mt-0 md:ml-4">
               <div className="relative w-full md:w-64">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
@@ -94,7 +94,7 @@ const Header = () => {
                   type="text"
                   name="search"
                   placeholder="Search a movie"
-                  className="block w-full px-3 py-2.5 ps-9 pe-3 mt-4 rounded-2xl border border-red-400 focus:ring-2 focus:ring-red-400 focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
+                  className="block w-full px-3 py-1.5 ps-9 pe-3 rounded-xl border border-red-400 focus:ring-2 focus:ring-red-400 focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
                 />
               </div>
             </form>
