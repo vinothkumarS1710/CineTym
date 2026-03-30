@@ -16,7 +16,7 @@ const Card = ({movie}) => {
   
   return (
     <div
-      className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-neutral-200 hover:border-red-300 rounded-lg shadow-xs cursor-pointer"
+      className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-black hover:border-[#ff3e03] hover:border-2 rounded-lg shadow-xs cursor-pointer"
       onClick={goToMovie}
     >
       <img className="rounded-t-lg h-96 mx-auto" src={image} alt="" />

@@ -27,7 +27,7 @@ const MovieDetails = () => {
   },[id]);
   
   return (
-    <main className="p-12 bg-neutral-primary-soft block m-8 max-h-sm border border-default rounded-lg shadow-xs relative overflow-hidden">
+    <main className="p-12 bg-neutral-primary-soft block m-8 min-h-screen overflow-hidden rounded-2xl shadow-xs relative overflow-hidden">
       <div className="absolute inset-[-40px] bg-cover bg-center blur-xl"
       style={{ backgroundImage: `url(${image})` }}></div>
       <section className="flex justify-around flex-wrap items-center ">

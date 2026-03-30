@@ -1,13 +1,34 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../assets/Logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Top", path: "/movies/top" },
+  { name: "Popular", path: "/movies/popular" },
+  { name: "Upcoming", path: "/movies/upcoming" },
+];
 
-  const activeClass = "block w-24 px-3 py-1.5 text-center font-semibold text-white bg-red-400 rounded-xl md:bg-red-400 md:text-white";
-  const inActiveClass = "block w-24 px-3 py-1.5 text-center font-semibold text-heading rounded-xl bg-neutral-tertiary md:border-0 md:text-fg-brand";
+const getIndicatorPosition = () => {
+  switch (location.pathname) {
+    case "/":
+      return "translate-x-[16px]";
+    case "/movies/top":
+      return "translate-x-[128px]";
+    case "/movies/popular":
+      return "translate-x-[240px]";
+    case "/movies/upcoming":
+      return "translate-x-[352px]";
+    default:
+      return "translate-x-[16px]";
+  }
+};
+
+  const activeClass = "block cursor-pointer w-24 px-3 py-1.5 text-center font-semibold text-[#ff3e03] rounded-xl md:text-[#ff3e03]";
+  const inActiveClass = "block cursor-pointer w-24 px-3 py-1.5 text-center font-semibold text-heading md:border-0";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +38,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-neutral-primary w-full border-b border-default">
+    <header className="bg-neutral-primary w-full border-b border-[#ff3e03]">
       <div className="mx-auto px-4 py-5 max-w-screen-xl">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -35,10 +56,10 @@ const Header = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 w-10 h-10 flex items-center justify-center hover:bg-neutral-secondary-soft hover:text-heading focus:text-red-400">
+              className="md:hidden p-2 w-10 h-10 flex items-center justify-center hover:bg-neutral-secondary-soft hover:text-heading focus:text-[#ff3e03]">
               <span className="sr-only">Open Main menu</span>
               <svg
-                className="w-6 h-6 text-red-400 rounded-3xl"
+                className="w-6 h-6 text-[#ff3e03] rounded-3xl"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -50,9 +71,10 @@ const Header = () => {
             </button>
           </div>
 
-          <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto ${isOpen ? "block" : "hidden md:flex"} md:mt-0`}>
+          <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto h-auto ${isOpen ? "block" : "hidden md:flex"} md:mt-0`}>
 
-            <ul className="flex flex-col md:flex-row md:space-x-4 mt-8 mb-3 items-center w-56 md:w-auto md:mt-0 md:mb-0 border border-red-400 md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
+            <ul className="relative flex flex-col md:flex-row md:space-x-4 mt-8 mb-3 items-center w-56 md:w-auto md:mt-0 md:mb-0 border border-[#ff5703] md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
+              <span className={` hidden sm:block absolute bottom-0 h-[2px] w-24 bg-gradient-to-r from-white via-[#ff3e03] to-white transition-all duration-300 ${getIndicatorPosition()}`}/>
               <li>
                 <NavLink to="/" end className={({ isActive }) => isActive ? activeClass : inActiveClass}>
                   Home
@@ -80,7 +102,7 @@ const Header = () => {
               <div className="relative w-full md:w-64">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
-                    className="w-4 h-4 text-red-300"
+                    className="w-4 h-4 text-[#ff3e03]"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -94,7 +116,7 @@ const Header = () => {
                   type="text"
                   name="search"
                   placeholder="Search a movie"
-                  className="block w-full px-3 py-1.5 ps-9 pe-3 rounded-xl border border-red-400 focus:ring-2 focus:ring-red-400 focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
+                  className="block w-full px-3 py-1.5 ps-9 pe-3 rounded-xl border border-[#ff3e03] focus:ring-2 focus:ring-[#ff3e03] focus:outline-none rounded-2xl p-1 shadow-xs placeholder:text-body"
                 />
               </div>
             </form>
