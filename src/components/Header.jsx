@@ -38,7 +38,7 @@ const getIndicatorPosition = () => {
   };
 
   return (
-    <header className="bg-neutral-primary w-full border-b border-[#ff3e03]">
+    <header className="bg-neutral-primary w-full border-b border-black md:border-[#ff3e03]">
       <div className="mx-auto px-4 py-5 max-w-screen-xl">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
