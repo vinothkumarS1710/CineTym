@@ -15,10 +15,7 @@ const Card = ({movie}) => {
   
   
   return (
-    <div
-      className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-black hover:border-[#ff3e03] hover:border-2 rounded-lg shadow-xs cursor-pointer"
-      onClick={goToMovie}
-    >
+    <div className="bg-neutral-primary-soft mx-auto block max-w-xs p-6 border border-black hover:border-[#ff3e03] hover:border-2 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105" onClick={goToMovie}>
       <img className="rounded-t-lg h-96 mx-auto" src={image} alt="" />
 
       <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">
