@@ -1,16 +1,263 @@
-# React + Vite
+# 🎬 Cinetym
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cinetym is a modern movie discovery web application that allows users to explore trending, popular, top-rated, and upcoming movies. Built with React and TMDB API, the platform provides an intuitive and responsive experience for discovering movie details, ratings, release dates, and trailers.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 https://cinetym.vercel.app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
+### Home Page
+![Home](./screenshots/home.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Movie Details
+![Movie Details](./screenshots/details.png)
+
+### Search Movies
+![Search Movies](./screenshots/search.png)
+
+---
+
+## ✨ Features
+
+### 🎥 Movie Discovery
+- Browse Trending Movies
+- Explore Popular Movies
+- View Top Rated Movies
+- Discover Upcoming Releases
+
+### 🔍 Smart Search
+- Search movies instantly
+- Real-time movie results
+- Quick access to movie information
+
+### 📄 Detailed Information
+- Movie overview and synopsis
+- Ratings and vote counts
+- Genres
+- Movie posters and backdrops
+
+### 📱 Responsive Design
+- Mobile-friendly interface
+- Tablet optimized layouts
+- Desktop responsive experience
+
+### ⚡ Performance
+- Fast API fetching
+- Smooth navigation
+- Optimized user experience
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- React Router DOM
+
+### Dev dependency
+- react-router-dom
+
+### API
+- TMDB (The Movie Database) API
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Folder Structure
+
+```bash
+Cinetym/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── screenshots/
+│   ├── home.png
+│   ├── details.png
+│   └── search.png
+│
+├── .env
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+- Node.js (v18 or later)
+- npm
+
+Check versions:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## 🔧 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/cinetym.git
+```
+
+### 2. Navigate to Project Directory
+
+```bash
+cd cinetym
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Create Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key
+```
+
+---
+
+## 🔑 Getting TMDB API Key
+
+1. Visit https://www.themoviedb.org
+2. Create an account
+3. Go to Settings → API
+4. Generate an API Key
+5. Add the key to your `.env` file
+
+---
+
+## ▶️ Run Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Application will run at:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌟 Key Highlights
+
+- Modern React Architecture
+- Component-Based Design
+- Responsive User Interface
+- API Integration with TMDB
+- Fast Search Functionality
+- Dynamic Routing
+- Optimized Performance
+
+---
+
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+### Steps
+
+1. Fork the repository
+
+2. Create your feature branch
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request
+
+---
+
+## 🐛 Issues
+
+If you find any bugs or want to request a feature, feel free to open an issue.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+### Vinoth Kumar S
+
+- GitHub: https://github.com/vinothkumarS1710
+- LinkedIn: https://www.linkedin.com/in/vinoth-fullstack
+
+---
+
+## 🙌 Acknowledgements
+
+- TMDB API for movie data
+- React Community
+- Tailwind CSS
+- Vite
+
+---
+
+⭐ If you found this project useful, don't forget to give it a star on GitHub!
