@@ -122,7 +122,7 @@ npm -v
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/cinetym.git
+git clone https://github.com/vinothkumarS1710/CineTym.git
 ```
 
 ### 2. Navigate to Project Directory
@@ -136,24 +136,6 @@ cd cinetym
 ```bash
 npm install
 ```
-
-### 4. Create Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-VITE_TMDB_API_KEY=your_tmdb_api_key
-```
-
----
-
-## 🔑 Getting TMDB API Key
-
-1. Visit https://www.themoviedb.org
-2. Create an account
-3. Go to Settings → API
-4. Generate an API Key
-5. Add the key to your `.env` file
 
 ---
 
@@ -233,12 +215,6 @@ git push origin feature/new-feature
 ## 🐛 Issues
 
 If you find any bugs or want to request a feature, feel free to open an issue.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ---
 
