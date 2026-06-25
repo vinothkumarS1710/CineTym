@@ -233,4 +233,10 @@ If you find any bugs or want to request a feature, feel free to open an issue.
 
 ---
 
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
 ⭐ If you found this project useful, don't forget to give it a star on GitHub!
