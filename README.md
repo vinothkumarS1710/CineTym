@@ -60,9 +60,6 @@ Cinetym is a modern movie discovery web application that allows users to explore
 - Tailwind CSS
 - React Router DOM
 
-### Dev dependency
-- react-router-dom
-
 ### API
 - TMDB (The Movie Database) API
 
