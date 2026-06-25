@@ -222,7 +222,7 @@ If you find any bugs or want to request a feature, feel free to open an issue.
 
 ### Vinoth Kumar S
 
-- GitHub: https://github.com/vinothkumarS1710
+- Email:  vinothkumarbscit46@gmail.com
 - LinkedIn: https://www.linkedin.com/in/vinoth-fullstack
 
 ---
