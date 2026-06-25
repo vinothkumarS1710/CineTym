@@ -5,27 +5,30 @@ import Logo from "../assets/Logo.png";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Top", path: "/movies/top" },
-  { name: "Popular", path: "/movies/popular" },
-  { name: "Upcoming", path: "/movies/upcoming" },
-];
+  const location = useLocation();
 
-const getIndicatorPosition = () => {
-  switch (location.pathname) {
-    case "/":
-      return "translate-x-[16px]";
-    case "/movies/top":
-      return "translate-x-[128px]";
-    case "/movies/popular":
-      return "translate-x-[240px]";
-    case "/movies/upcoming":
-      return "translate-x-[352px]";
-    default:
-      return "translate-x-[16px]";
-  }
-};
+  const showIndicator = [
+    "/",
+    "/movies/top",
+    "/movies/popular",
+    "/movies/upcoming",
+  ].includes(location.pathname);
+  
+
+  const getIndicatorPosition = () => {
+    switch (location.pathname) {
+      case "/":
+        return "translate-x-[16px]";
+      case "/movies/top":
+        return "translate-x-[128px]";
+      case "/movies/popular":
+        return "translate-x-[240px]";
+      case "/movies/upcoming":
+        return "translate-x-[352px]";
+      default:
+        return "translate-x-[16px]";
+    }
+  };
 
   const activeClass = "block cursor-pointer w-24 px-3 py-1.5 text-center font-semibold text-[#FF4B33] rounded-xl md:text-[#FF4B33]";
   const inActiveClass = "block cursor-pointer w-24 px-3 py-1.5 text-center font-semibold text-heading md:border-0";
@@ -74,7 +77,7 @@ const getIndicatorPosition = () => {
           <div className={`flex flex-col md:flex-row md:items-center items-center md:space-x-6 w-full md:w-auto h-auto ${isOpen ? "block" : "hidden md:flex"} md:mt-0`}>
 
             <ul className="relative flex flex-col md:flex-row md:space-x-4 mt-8 mb-3 items-center w-56 md:w-auto md:mt-0 md:mb-0 border border-[#ff5703] md:border-0 rounded-2xl bg-neutral-secondary-soft md:bg-neutral-primary p-4 md:p-0">
-              <span className={` hidden sm:block absolute bottom-0 h-[2px] w-24 bg-gradient-to-r from-white via-[#FF4B33] to-white transition-all duration-300 ${getIndicatorPosition()}`}/>
+              {showIndicator && (<span className={`hidden sm:block absolute bottom-0 h-[2px] w-24 bg-gradient-to-r from-white via-[#FF4B33] to-white transition-all duration-300 ${getIndicatorPosition()}`}/>)}
               <li>
                 <NavLink to="/" end className={({ isActive }) => isActive ? activeClass : inActiveClass}>
                   Home

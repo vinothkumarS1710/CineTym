@@ -8,7 +8,7 @@ const Footer = () => {
         <span className="text-sm text-body">
         © 2026 
         <a href="/" className="hover:underline ms-1">CineTym™</a>. 
-        All Rights Reserved.
+        Licensed under MIT.
         </span>
 
         
