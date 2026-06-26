@@ -187,10 +187,10 @@ Contributions are welcome!
 
 1. Fork the repository
 
-2. Create your feature branch
+2. Create your new-feature branch
 
 ```bash
-git checkout -b feature/new-feature
+git checkout -b new-feature
 ```
 
 3. Commit your changes
@@ -202,7 +202,7 @@ git commit -m "Add new feature"
 4. Push to GitHub
 
 ```bash
-git push origin feature/new-feature
+git push origin new-feature
 ```
 
 5. Open a Pull Request
